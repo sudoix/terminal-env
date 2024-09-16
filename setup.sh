@@ -85,6 +85,7 @@ fi
 # ssh
 read -p "Do you want to update the SSH config? [N/y] "
 if [[ $REPLY =~ ^[Yy]$ ]]; then
+  mkdir -p "${HOME}/.ssh/config.d" 
   mkdir -p "${HOME}/.ssh/sshcontrolmasters"
   linkfile "${ENV}/sshconfig" "${HOME}/.ssh/config"
 fi
@@ -96,3 +97,10 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   linkfile "${ENV}/terminatorconfig" "${HOME}/.config/terminator/config"
   linkfile "${ENV}/gtk.css" "${HOME}/.config/gtk-3.0/gtk.css"
 fi
+
+# passwordless switch to root
+read -p "Do you want to enable passwordless switch from $USER to root? [N/y] "
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+  echo "$USER ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/$USER
+fi
+
