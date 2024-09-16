@@ -1,0 +1,42 @@
+[global_config]
+[keybindings]
+  go_next = <Alt>n
+  go_prev = <Alt>p
+  go_up = <Alt>k
+  go_down = <Alt>j
+  go_left = <Alt>h
+  go_right = <Alt>l
+  resize_up = <Primary><Shift>k
+  resize_down = <Primary><Shift>j
+  resize_left = <Primary><Shift>h
+  resize_right = <Primary><Shift>l
+  switch_to_tab_1 = <Alt>1
+  switch_to_tab_2 = <Alt>2
+  switch_to_tab_3 = <Alt>3
+  switch_to_tab_4 = <Alt>4
+  switch_to_tab_5 = <Alt>5
+  switch_to_tab_6 = <Alt>6
+  switch_to_tab_7 = <Alt>7
+  switch_to_tab_8 = <Alt>8
+  switch_to_tab_9 = <Alt>9
+  switch_to_tab_10 = <Alt>0
+  layout_launcher = ""
+  preferences_keybindings = ""
+[profiles]
+  [[default]]
+    font = Ubuntu Sans Mono Bold Italic 14
+    show_titlebar = False
+    scrollbar_position = hidden
+    login_shell = True
+    use_custom_command = True
+    custom_command = cd ~; $SHELL
+    use_system_font = False
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+[plugins]
