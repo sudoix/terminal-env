@@ -7,7 +7,12 @@ LN="ln -fs"
 sudo apt update && sudo apt install -y python3-pip python3-venv curl git tmux\
   python3-full xclip ansible zsh-autosuggestions zsh-syntax-highlighting \
   gnupg software-properties-common flameshot kazam vlc aptitude nload aria2 \
-  gcc make perl terminator jcal remina keepassxc p7zip-full rar unrar bmon\
+  gcc make perl terminator jcal remmina keepassxc p7zip-full rar unrar bmon\
+
+if [[ $? -ne 0 ]]; then
+  echo "Some packages failed to install"
+  exit 1
+fi
 
 # Install Oh My Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
