@@ -1,0 +1,9 @@
+################################## General #################################
+alias s="ssh -v"
+alias v="vim"
+alias la="ls -ltrha --color=auto"
+alias clip="xclip -selection c $@"
+alias grep="grep --color=always $@"
+
+# git aliases
+alias gp='git pull'
