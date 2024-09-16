@@ -18,7 +18,8 @@ fi
 read -p "Do you want to install Oh My Zsh? [N/y] "
 if [[ $REPLY =~ ^[Yy]$ ]]; then
   rm -rf ~/.oh-my-zsh
-  yes | sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  yes | sh -c "$(curl -fsSL \
+  https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
 
 if [[ $? -ne 0 ]]; then
@@ -33,12 +34,13 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
 fi
 
 # Install Oh My Zsh Plugins
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions \
+  ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
 # Install Vim plugins
 read -p "Do you want to install Vim plugins? [N/y] " 
 if [[ $REPLY =~ ^[Yy]$ ]]; then
-	curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+  curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 	    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
   python3 -m venv ${HOME}/.vim/pyenv
@@ -73,6 +75,7 @@ fi
 read -p "Do you want to create .vimrc? [N/y] "
 if [[ $REPLY =~ ^[Yy]$ ]]; then
   linkfile "${ENV}/vimrc" "${HOME}/.vimrc"
+  vim +PlugInstall +qall
 fi
 
 # default editor
@@ -101,6 +104,12 @@ fi
 # passwordless switch to root
 read -p "Do you want to enable passwordless switch from $USER to root? [N/y] "
 if [[ $REPLY =~ ^[Yy]$ ]]; then
-  echo "$USER ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/$USER
+  echo "$USER ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/$USER \
+  > /dev/null
 fi
 
+# reboot for apply changes
+read -p "Do you want to reboot? [N/y] "
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+  sudo reboot
+fi
