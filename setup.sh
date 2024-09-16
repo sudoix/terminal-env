@@ -5,7 +5,7 @@ LN="ln -fs"
 
 # Install some packages 
 sudo apt update && sudo apt install -y python3-pip python3-venv curl git tmux\
-  python3-full xclip ansible zsh-autosuggestions zsh-syntax-highlighting \
+  python3-full xclip ansible zsh-autosuggestions zsh-syntax-highlighting vim \
   gnupg software-properties-common flameshot kazam vlc aptitude nload aria2 \
   gcc make perl terminator jcal remmina keepassxc p7zip-full rar unrar bmon\
 
@@ -15,7 +15,22 @@ if [[ $? -ne 0 ]]; then
 fi
 
 # Install Oh My Zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+read -p "Do you want to install Oh My Zsh? [N/y] "
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+  rm -rf ~/.oh-my-zsh
+  yes | sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+fi
+
+if [[ $? -ne 0 ]]; then
+  echo "Oh My Zsh failed to install"
+  exit 1
+fi
+
+# Set up ZSH as default shell
+read -p "Do you want to set ZSH as the default shell? [N/y] "
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+  chsh -s $(which zsh)
+fi
 
 # Install Oh My Zsh Plugins
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
