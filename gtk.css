@@ -1,0 +1,56 @@
+/*
+You can type here any CSS rule recognized by GTK+.
+You can temporarily disable this custom CSS by clicking on the “Pause” button above.
+
+Changes are applied instantly and globally, for the whole application.
+*/
+
+headerbar {
+  background: #202124;
+  border-color: #202124;
+  box-shadow: 0 1px #202124 inset;
+  color: #aaaaaa;
+}
+
+headerbar:backdrop {
+  color: #777777;
+}
+
+.terminator-terminal-window notebook stack,
+.terminator-terminal-window notebook {
+  border: 0px;
+}
+
+.terminator-terminal-window notebook header {
+  background: #000000;
+  border: none;
+  padding: 0px;
+}
+
+.terminator-terminal-window notebook tab {
+  background: #000000;
+  border-top: none;
+  border-left: none;
+  border-right: 1px solid #303030;
+  border-bottom: 1px solid #303030;
+  margin: 0px;
+  padding: 0px;
+}
+
+.terminator-terminal-window notebook tab:checked {
+  background: #000000;
+  color: #008080;
+  border-top: none;
+  border-left: none;
+  border-right: 1px solid #303030;
+  border-bottom: 1px solid #303030;
+  box-shadow: 0 -1px #004040 inset;
+}
+
+.terminator-terminal-window notebook tab:hover {
+  box-shadow: 0 -1px #003030 inset;
+}
+
+.terminator-terminal-window paned separator {
+  background: #303030;
+}
