@@ -20,8 +20,9 @@ Just clone the repo and run the following command:
 - Save file in other location: `:w /path/to/filename`
 
 - Create new file: `press m` and then `Menu: [ (a)dd ,m,d,r,o,c,p,l,C,s] (Use
-    j/k/enter or shortcut):`
-- Create new directory: `:!mkdir -p path/to/new/dir`
+    j/k/enter or shortcut):` if you want to create a new directory add `/` at
+    the end of the path
+- Create new directory: `:!mkdir -p path/to/new/dir` (other solution)
 
 - Resize window vertically: `:vertical resize 100`
 - Resize window horizontally: `:horizontal resize 100`
