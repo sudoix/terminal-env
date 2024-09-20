@@ -5,7 +5,7 @@ LN="ln -fs"
 
 # Install some packages 
 sudo apt update && sudo apt install -y python3-pip python3-venv curl git tmux\
-  python3-full xclip ansible zsh-autosuggestions zsh-syntax-highlighting vim \
+  python3-full xclip zsh-autosuggestions zsh-syntax-highlighting vim \
   gnupg software-properties-common flameshot kazam vlc aptitude nload aria2 \
   gcc make perl terminator jcal remmina keepassxc p7zip-full rar unrar bmon\
 
@@ -106,6 +106,12 @@ read -p "Do you want to enable passwordless switch from $USER to root? [N/y] "
 if [[ $REPLY =~ ^[Yy]$ ]]; then
   echo "$USER ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/$USER \
   > /dev/null
+fi
+
+# DevOps tools
+read -p "Do you want to install DevOps tools? [N/y] "
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+  bash ${ENV}/devops-tools.sh
 fi
 
 # reboot for apply changes
