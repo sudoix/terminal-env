@@ -19,7 +19,7 @@ Plug 'tell-k/vim-autopep8'
 Plug 'liuchengxu/space-vim-dark'
 Plug 'evanleck/vim-svelte', {'branch': 'main'}
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
-
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 " codeium
 Plug 'Exafunction/codeium.vim', { 'branch': 'main' }
 " Haskell
