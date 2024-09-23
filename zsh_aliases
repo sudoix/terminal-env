@@ -4,6 +4,10 @@ alias v="vim"
 alias la="ls -ltrha --color=auto"
 alias clip="xclip -selection c $@"
 alias grep="grep --color=always $@"
+alias ip="ip -c=always $@"
+alias ipa="ip -c -br a"
+alias ipr="ip -c -br r"
+
 
 # git aliases
 alias gp='git pull'
