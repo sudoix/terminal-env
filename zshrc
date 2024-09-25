@@ -112,9 +112,15 @@ source $ZSH/oh-my-zsh.sh
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/bin/terraform terraform
 
-# Added by milad
+# Added by sudoix
 if [ -f ~/.zsh_aliases ]; then
     . ~/.zsh_aliases
 fi
+
+# DevOps Tools
 export PATH=$PATH:/usr/local/go/bin
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source <(kubectl completion zsh)
+alias k=kubectl
+complete -o default -F __start_kubectl k
+
