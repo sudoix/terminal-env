@@ -20,9 +20,12 @@ Plug 'liuchengxu/space-vim-dark'
 Plug 'evanleck/vim-svelte', {'branch': 'main'}
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-" codeium
-Plug 'Exafunction/codeium.vim', { 'branch': 'main' }
+Plug 'mrk21/yaml-vim' " For YAML syntax/indentation
+Plug 'Exafunction/codeium.vim', { 'branch': 'main' } " codeium
 Plug 'rodjek/vim-puppet' " For Puppet syntax highlighting
+Plug 'elzr/vim-json' " For metadata.json
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim' " Fuzzy Finder vim plugin
 " Haskell
 " Plug 'neovimhaskell/haskell-vim'
 " To be removed
