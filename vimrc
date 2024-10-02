@@ -22,9 +22,9 @@ Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 " codeium
 Plug 'Exafunction/codeium.vim', { 'branch': 'main' }
+Plug 'rodjek/vim-puppet' " For Puppet syntax highlighting
 " Haskell
 " Plug 'neovimhaskell/haskell-vim'
-
 " To be removed
 "Plug 'kien/ctrlp.vim'
 "Plug 'jistr/vim-nerdtree-tabs'
