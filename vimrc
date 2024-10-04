@@ -24,6 +24,15 @@ Plug 'mrk21/yaml-vim' " For YAML syntax/indentation
 Plug 'Exafunction/codeium.vim', { 'branch': 'main' } " codeium
 Plug 'rodjek/vim-puppet' " For Puppet syntax highlighting
 Plug 'elzr/vim-json' " For metadata.json
+"" Snippets
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+
+" python
+"" Python Bundle
+Plug 'davidhalter/jedi-vim'
+Plug 'raimon49/requirements.txt.vim', {'for': 'requirements'}
+
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim' " Fuzzy Finder vim plugin
 " Haskell
@@ -117,7 +126,7 @@ au BufRead,BufNewFile *.c,*.h,*.in,*.cpp,*.ino
 " 	\ setlocal colorcolumn=79 |
 "     \ setlocal expandtab |
 "     \ setlocal autoindent |
-
+" 
 " vim -b : edit binary using xxd-format!
 augroup Binary
   au!
