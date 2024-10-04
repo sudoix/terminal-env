@@ -27,6 +27,7 @@
     font = Ubuntu Sans Mono Bold Italic 14
     show_titlebar = False
     scrollbar_position = hidden
+	scrollback_lines = 5000
     login_shell = True
     use_custom_command = True
     custom_command = cd ~; $SHELL
