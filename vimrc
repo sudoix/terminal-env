@@ -50,6 +50,8 @@ Plug 'junegunn/fzf.vim' " Fuzzy Finder vim plugin
 "Plug 'OCamlPro/ocp-indent'
 call plug#end()
 
+au filetype go inoremap <buffer> . .<C-x><C-o>
+
 " https://github.com/Yggdroot/indentLine
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 
