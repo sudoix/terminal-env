@@ -5,7 +5,7 @@ LN="ln -fs"
 
 # Install some packages 
 sudo apt update && sudo apt install -y python3-pip python3-venv curl git tmux \
-  python3-full xclip zsh-autosuggestions zsh-syntax-highlighting vim ncal fzf \
+  python3-full xclip zsh-autosuggestions zsh-syntax-highlighting vim ncal \
   gnupg software-properties-common flameshot kazam vlc aptitude nload aria2 \
   gcc make perl terminator jcal remmina keepassxc p7zip-full rar unrar bmon \
 
@@ -14,7 +14,20 @@ if [[ $? -ne 0 ]]; then
   exit 1
 fi
 
-# Install Oh My Zsh
+# Install fzf
+read -p "Do you want to install fzf? [N/y] "
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+  rm -rf ~/.fzf
+  git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+  ~/.fzf/install
+fi
+
+if [[ $? -ne 0 ]]; then
+  echo "fzf failed to install"
+  exit 1
+fi
+
+# Install oh-my-zsh
 read -p "Do you want to install Oh My Zsh? [N/y] "
 if [[ $REPLY =~ ^[Yy]$ ]]; then
   rm -rf ~/.oh-my-zsh
