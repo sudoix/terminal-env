@@ -4,9 +4,13 @@ set hlsearch
 set clipboard=unnamedplus
 filetype off                  " required
 
+" set list
+" set listchars=tab:▸\ ,trail:·,space:·,eol:↲,nbsp:␣
+
 call plug#begin('~/.vim/plugged')
 " Specify a directory for plugins call plug#begin('~/.vim/plugged')
-
+Plug 'ntpeters/vim-better-whitespace' " Highlight trailing whitespace
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'pylover/c-syntax.vim'
 Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 Plug 'tmhedberg/SimpylFold'
@@ -286,8 +290,19 @@ color space-vim-dark
 hi ColorColumn guibg=#262626 ctermbg=235
 hi Search cterm=NONE ctermfg=white ctermbg=darkblue
 
-" Cursorline
+" Highlight cursor line underneath the cursor horizontally.
 set cursorline
+
+" Highlight cursor line underneath the cursor vertically.
+set cursorcolumn
+
+" Enable auto completion menu after pressing TAB.
+set wildmenu
+
+" Make wildmenu behave like similar to Bash completion.
+set wildmode=list:longest
+
+
 highlight CursorLineNr ctermbg=0 ctermfg=6
 
 " python-mode
