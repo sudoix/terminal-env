@@ -29,4 +29,9 @@ Just clone the repo and run the following command:
 
 - Switch between windows: `Ctrl + h/j/k/l`
 
+- Open terminal: `crtl + z`
+- Come back to code: `fg`
+
+- Hide and unhide file menu: `ctrl + n`
+
 
