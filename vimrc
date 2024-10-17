@@ -31,7 +31,7 @@ Plug 'elzr/vim-json' " For metadata.json
 "" Snippets
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-
+Plug 'fatih/vim-hclfmt'               " HCL formatting
 " python
 "" Python Bundle
 Plug 'davidhalter/jedi-vim'
