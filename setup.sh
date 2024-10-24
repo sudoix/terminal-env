@@ -3,9 +3,9 @@
 ENV=`dirname "$(readlink -f "$BASH_SOURCE")"`
 LN="ln -fs"
 
-# Install some packages 
+# Install some packages
 sudo apt update && sudo apt install -y python3-pip python3-venv curl git tmux \
-  python3-full xclip zsh-autosuggestions zsh-syntax-highlighting vim ncal \
+  python3-full xclip zsh-autosuggestions zsh-syntax-highlighting vim ncal tree\
   gnupg software-properties-common flameshot kazam vlc aptitude nload aria2 \
   gcc make perl terminator jcal remmina keepassxc p7zip-full rar unrar bmon \
 
