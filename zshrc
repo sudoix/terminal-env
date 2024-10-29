@@ -121,6 +121,8 @@ fi
 export PATH=$PATH:/usr/local/go/bin
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source <(kubectl completion zsh)
+alias kubectl=kubecolor
+compdef kubecolor=kubectl
 alias k=kubectl
 complete -o default -F __start_kubectl k
 
