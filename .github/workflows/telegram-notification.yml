@@ -14,11 +14,16 @@ jobs:
     steps:
       - name: Send Telegram Message
         run: |
+          MESSAGE="🚀 *GitHub Action Triggered!*\n"
+          MESSAGE+="🔖 *Event:* ${{ github.event_name }}\n"
+          MESSAGE+="🌐 *Repository:* [${{ github.repository }}](${{ github.server_url }}/${{ github.repository }})\n"
+          MESSAGE+="🔗 *Branch:* ${{ github.ref }}\n"
+          MESSAGE+="👤 *Actor:* [${{ github.actor }}](${{ github.server_url }}/${{ github.actor }})\n"
+          MESSAGE+="💬 *Commit Message:* '${{ github.event.head_commit.message }}'\n"
           curl -X POST \
             https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage \
-            -d chat_id=${{ secrets.TELEGRAM_CHAT_ID }} \
-            -d text="🚀 Action triggered: ${{ github.event_name }} on ${{ github.ref }} by ${{ github.actor }}. Commit message: '${{ github.event.head_commit.message }}'"
+            -H 'Content-Type: application/json' \
+            -d "{\"chat_id\": \"${{ secrets.TELEGRAM_CHAT_ID }}\", \"text\": \"$MESSAGE\", \"parse_mode\": \"Markdown\"}"
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-
