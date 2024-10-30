@@ -16,8 +16,9 @@ jobs:
         run: |
           MESSAGE="🚀 *GitHub Action Triggered!*\n"
           MESSAGE+="🔖 *Event:* ${{ github.event_name }}\n"
+          MESSAGE+="🌐 *Repository:* [${{ github.repository }}](${{ github.server_url }}/${{ github.repository }})\n"
           MESSAGE+="🔗 *Branch:* ${{ github.ref }}\n"
-          MESSAGE+="👤 *Actor:* ${{ github.actor }}\n"
+          MESSAGE+="👤 *Actor:* [${{ github.actor }}](${{ github.server_url }}/${{ github.actor }})\n"
           MESSAGE+="💬 *Commit Message:* '${{ github.event.head_commit.message }}'\n"
           curl -X POST \
             https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage \
