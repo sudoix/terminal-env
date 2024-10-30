@@ -35,3 +35,5 @@ Just clone the repo and run the following command:
 - Hide and unhide file menu: `ctrl + n`
 
 
+
+Feel free to contribute!
