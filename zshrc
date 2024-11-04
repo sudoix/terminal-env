@@ -125,4 +125,11 @@ alias kubectl=kubecolor
 compdef kubecolor=kubectl
 alias k=kubectl
 complete -o default -F __start_kubectl k
-
+## create yaml on-the-fly faster
+export do='--dry-run=client -o yaml'
+## organize your files per question #
+mkcd() { mkdir -p "$@" && cd "$@" ; }
+## destroy things without waiting
+export now='--grace-period 0 --force'
+## namespaces (poor man's `kubens`)
+export nk='-n kube-system'
