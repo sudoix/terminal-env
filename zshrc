@@ -126,7 +126,8 @@ compdef kubecolor=kubectl
 alias k=kubectl
 complete -o default -F __start_kubectl k
 ## create yaml on-the-fly faster
-export do='--dry-run=client -o yaml'
+# export do='--dry-run=client -o yaml' # for bash
+export do=(--dry-run=client -o yaml) # for zsh
 ## organize your files per question #
 mkcd() { mkdir -p "$@" && cd "$@" ; }
 ## destroy things without waiting
