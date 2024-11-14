@@ -115,6 +115,12 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   linkfile "${ENV}/gtk.css" "${HOME}/.config/gtk-3.0/gtk.css"
 fi
 
+# youtube
+read -p "Do you want to add youtube script to your PATH? [N/y] "
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+  linkfile "${ENV}/youtube" "/usr/local/bin/you"
+fi
+
 # passwordless switch to root
 read -p "Do you want to enable passwordless switch from $USER to root? [N/y] "
 if [[ $REPLY =~ ^[Yy]$ ]]; then

@@ -1,0 +1,50 @@
+#!/bin/bash
+
+# ASCII art for your branding
+ASCII_ART="
++=========================================================+
+|                                                         |
+|   ######  ##     ## ########   #######  #### ##     ##  |
+|  ##    ## ##     ## ##     ## ##     ##  ##   ##   ##   |
+|  ##       ##     ## ##     ## ##     ##  ##    ## ##    |
+|   ######  ##     ## ##     ## ##     ##  ##     ###     |
+|        ## ##     ## ##     ## ##     ##  ##    ## ##    |
+|  ##    ## ##     ## ##     ## ##     ##  ##   ##   ##   |
+|   ######   #######  ########   #######  #### ##     ##  |
+|                                                         |
++=========================================================+
+"
+
+# Terminal color codes
+HEADER='\033[95m'
+BLUE='\033[94m'
+GREEN='\033[92m'
+YELLOW='\033[93m'
+RED='\033[91m'
+END='\033[0m'
+BOLD='\033[1m'
+UNDERLINE='\033[4m'
+
+echo -e "${HEADER}${ASCII_ART}${END}"
+
+echo -e "${BLUE}YouTube Channel Information:${END}"
+echo -e "${GREEN}${BOLD}Channel URL:${END} www.youtube.com/@sudoix"
+
+echo
+
+echo -e "${BLUE}GitHub Information:${END}"
+echo -e "${GREEN}${BOLD}Profile:${END} github.com/sudoix"
+
+echo
+
+echo -e "${BLUE}Telegram Channel:${END}"
+echo -e "${GREEN}${BOLD}Channel Link:${END} t.me/sudoix_channel"
+
+echo
+
+echo -e "${BLUE}Telegram Group:${END}"
+echo -e "${GREEN}${BOLD}Group Link:${END} https://t.me/SudoSuDash"
+
+echo
+
+
