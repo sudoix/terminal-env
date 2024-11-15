@@ -4,6 +4,17 @@ Usage:
 
 Just clone the repo and run the following command:
 
+**Note**: If you get an dulicated key error when you want to use broadcasting
+in terminator it's about your keyaboard because it run `ibus` and it's not
+related to terminator.
+(https://github.com/gnome-terminator/terminator/issues/771#issuecomment-1583663774)
+You can kill ibus by running the following command:
+
+```bash
+pkill ibus
+```
+
+Usage:
 ```bash
 ./setup.sh
 ```
