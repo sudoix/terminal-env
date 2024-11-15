@@ -20,6 +20,8 @@
   switch_to_tab_8 = <Alt>8
   switch_to_tab_9 = <Alt>9
   switch_to_tab_10 = <Alt>0
+  broadcast_off = <Alt>s
+  broadcast_all = <Alt>a
   layout_launcher = ""
   preferences_keybindings = ""
 [profiles]
