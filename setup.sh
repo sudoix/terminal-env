@@ -52,7 +52,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions \
   ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
 # Install Vim plugins
-read -p "Do you want to install Vim plugins? [N/y] " 
+read -p "Do you want to install Vim plugins? [N/y] "
 if [[ $REPLY =~ ^[Yy]$ ]]; then
   curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 	    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -75,12 +75,12 @@ function linkfile {
 }
 
 # zsh
-read -p "Do you want to update the .zshrc? [N/y] " 
+read -p "Do you want to update the .zshrc? [N/y] "
 if [[ $REPLY =~ ^[Yy]$ ]]; then
   linkfile "${ENV}/zshrc" "${HOME}/.zshrc"
 fi
 
-read -p "Do you want to update the .zsh_aliases? [N/y] " 
+read -p "Do you want to update the .zsh_aliases? [N/y] "
 if [[ $REPLY =~ ^[Yy]$ ]]; then
   linkfile "${ENV}/zsh_aliases" "${HOME}/.zsh_aliases"
 fi
@@ -102,7 +102,7 @@ fi
 # ssh
 read -p "Do you want to update the SSH config? [N/y] "
 if [[ $REPLY =~ ^[Yy]$ ]]; then
-  mkdir -p "${HOME}/.ssh/config.d" 
+  mkdir -p "${HOME}/.ssh/config.d"
   mkdir -p "${HOME}/.ssh/sshcontrolmasters"
   linkfile "${ENV}/sshconfig" "${HOME}/.ssh/config"
 fi
@@ -115,10 +115,18 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   linkfile "${ENV}/gtk.css" "${HOME}/.config/gtk-3.0/gtk.css"
 fi
 
+# change wallpaper
+read -p "Do you want to change the wallpaper? [N/y] "
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+  gsettings set org.gnome.desktop.background picture-uri-dark \
+    file://`pwd`/background.jpg
+fi
+
+
 # youtube
 read -p "Do you want to add youtube script to your PATH? [N/y] "
 if [[ $REPLY =~ ^[Yy]$ ]]; then
-  linkfile "${ENV}/youtube" "/usr/local/bin/you"
+  linkfile "${ENV}/youtube" "/usr/local/bin/yu"
 fi
 
 # passwordless switch to root
