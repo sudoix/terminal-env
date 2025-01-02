@@ -28,6 +28,9 @@ Plug 'mrk21/yaml-vim' " For YAML syntax/indentation
 Plug 'Exafunction/codeium.vim', { 'branch': 'main' } " codeium
 Plug 'rodjek/vim-puppet' " For Puppet syntax highlighting
 Plug 'elzr/vim-json' " For metadata.json
+" Jinja2
+Plug 'Glench/Vim-Jinja2-Syntax'
+"Plug 'https://github.com/lepture/vim-jinja.git
 "" Snippets
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'

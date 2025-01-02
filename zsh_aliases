@@ -21,6 +21,7 @@ alias grep="grep --color=always $@"
 alias ip="ip -c=always $@"
 alias ipa="ip -c -br a"
 alias ipr="ip -c -br r"
+sshpw='ssh -o PasswordAuthentication=yes -o PreferredAuthentications=password'
 
 ################################## Kubernetes ##############################
 alias k3s="export KUBECONFIG=~/.kube/k3s && echo -e '\n\n\033[32mYou are in K3S environment\033[0m\n\n' && k get node"

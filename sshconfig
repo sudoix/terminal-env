@@ -4,3 +4,5 @@ Host *
   ControlPath ~/.ssh/sshcontrolmasters/%r@%h:%p
   ControlPersist 10m
   ServerAliveInterval 30
+  StrictHostKeyChecking no
+

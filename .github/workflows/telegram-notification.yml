@@ -14,7 +14,7 @@ jobs:
     steps:
       - name: Send Telegram Message
         run: |
-          MESSAGE="🚀 *GitHub Action Triggered!*\n"
+          MESSAGE="🚀 *New commit on repo!*\n"
           MESSAGE+="🔖 *Event:* ${{ github.event_name }}\n"
           MESSAGE+="🌐 *Repository:* [${{ github.repository }}](${{ github.server_url }}/${{ github.repository }})\n"
           MESSAGE+="🔗 *Branch:* ${{ github.ref }}\n"
