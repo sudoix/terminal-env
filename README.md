@@ -11,6 +11,7 @@ pkill ibus
 ```
 
 Usage:
+
 Just clone the repo and run the following command:
 ```bash
 ./setup.sh
