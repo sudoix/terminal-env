@@ -136,6 +136,9 @@ au BufRead,BufNewFile *.c,*.h,*.in,*.cpp,*.ino
 "     \ setlocal expandtab |
 "     \ setlocal autoindent |
 " 
+" Assuming the objects are highlighted using the 'yamlBlockMappingKey' group:
+autocmd FileType yaml highlight yamlBlockMappingKey guifg=#00FF00 ctermfg=Green
+autocmd FileType yml highlight yamlBlockMappingKey guifg=#00FF00 ctermfg=Green
 " vim -b : edit binary using xxd-format!
 augroup Binary
   au!
