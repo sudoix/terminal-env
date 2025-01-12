@@ -42,6 +42,7 @@ Plug 'raimon49/requirements.txt.vim', {'for': 'requirements'}
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim' " Fuzzy Finder vim plugin
+Plug 'rust-lang/rust.vim' " Rust syntax highlighting
 " Haskell
 " Plug 'neovimhaskell/haskell-vim'
 " To be removed
