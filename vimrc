@@ -3,7 +3,7 @@ set number
 set hlsearch
 set clipboard=unnamedplus
 filetype off                  " required
-
+let g:auto_save = 1  " enable AutoSave on Vim startup
 " set list
 " set listchars=tab:▸\ ,trail:·,space:·,eol:↲,nbsp:␣
 
@@ -43,6 +43,7 @@ Plug 'raimon49/requirements.txt.vim', {'for': 'requirements'}
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim' " Fuzzy Finder vim plugin
 Plug 'rust-lang/rust.vim' " Rust syntax highlighting
+Plug 'https://github.com/907th/vim-auto-save.git' " Auto save
 " Haskell
 " Plug 'neovimhaskell/haskell-vim'
 " To be removed
