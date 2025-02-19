@@ -16,13 +16,16 @@ Just clone the repo and run the following command:
 ```bash
 ./setup.sh
 ```
-
+### install coc languages support
+```bash
+:CocInstall coc-python coc-go coc-yaml
+```
 ### Some useful commands:
 
 - Open directory in VIM: `vim .`
 - Open file: `press enter`
-- Open file horizontally: `s`
-- Open file vertically: `v`
+- Open file vertically: `s`
+- Open file horizontally: `i`
 
 - Quit with/without save: `:q/:q!/:wq/:wq!`
 - Save file: `:w`

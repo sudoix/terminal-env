@@ -1,5 +1,6 @@
 set nowrap
 set number
+set ic
 set hlsearch
 set clipboard=unnamedplus
 filetype off                  " required
@@ -12,6 +13,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'ntpeters/vim-better-whitespace' " Highlight trailing whitespace
 " Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'pylover/c-syntax.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 Plug 'tmhedberg/SimpylFold'
 Plug 'vim-scripts/indentpython.vim'
@@ -58,6 +60,9 @@ Plug 'https://github.com/907th/vim-auto-save.git' " Auto save
 "Plug 'jpalardy/vim-slime'
 "Plug 'OCamlPro/ocp-indent'
 call plug#end()
+
+" Use <Enter> to confirm selections in the coc.nvim suggestion list
+inoremap <expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 
 au filetype go inoremap <buffer> . .<C-x><C-o>
 
