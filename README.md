@@ -25,7 +25,7 @@ Just clone the repo and run the following command:
 - Open directory in VIM: `vim .`
 - Open file: `press enter`
 - Open file vertically: `s`
-- Open file horizontally: `i`
+- Open file horizontally: `v`
 
 - Quit with/without save: `:q/:q!/:wq/:wq!`
 - Save file: `:w`

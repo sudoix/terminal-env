@@ -4,7 +4,7 @@ set ic
 set hlsearch
 set clipboard=unnamedplus
 filetype off                  " required
-let g:auto_save = 1  " enable AutoSave on Vim startup
+" let g:auto_save = 1  " enable AutoSave on Vim startup
 " set list
 " set listchars=tab:▸\ ,trail:·,space:·,eol:↲,nbsp:␣
 
