@@ -37,8 +37,8 @@ if [[ $? -ne 0 ]]; then
 fi
 
 # kubecolor
-chmod +x kubecolor
-mv kubecolor /usr/local/bin/kubecolor
+sudo chmod +x kubecolor
+sudo mv kubecolor /usr/local/bin/kubecolor
 
 # Install helm packages
 curl -fsSL -o get_helm.sh \
