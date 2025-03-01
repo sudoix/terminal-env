@@ -36,6 +36,10 @@ if [[ $? -ne 0 ]]; then
   exit 1
 fi
 
+# kubecolor
+chmod +x kubecolor
+mv kubecolor /usr/local/bin/kubecolor
+
 # Install helm packages
 curl -fsSL -o get_helm.sh \
   https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
