@@ -21,6 +21,7 @@ alias grep="grep --color=always $@"
 alias ip="ip -c=always $@"
 alias ipa="ip -c -br a"
 alias ipr="ip -c -br r"
+alias lsblk="lsblk -f"
 sshpw='ssh -o PasswordAuthentication=yes -o PreferredAuthentications=password'
 
 ################################## Kubernetes ##############################
