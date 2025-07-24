@@ -1,6 +1,6 @@
 set nowrap
-set number
 set ic
+set number
 set hlsearch
 set clipboard=unnamedplus
 filetype off                  " required
@@ -68,7 +68,8 @@ au filetype go inoremap <buffer> . .<C-x><C-o>
 
 " https://github.com/Yggdroot/indentLine
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
-
+" Enable the visibility of hidden files in NERDTree
+let NERDTreeShowHidden=1
 syntax on
 filetype plugin indent on    " required
 
@@ -445,7 +446,6 @@ let g:prettier#quickfix_enabled = 0
 let g:prettier#autoformat_require_pragma = 0
 au BufWritePre *.css,*.svelte,*.pcss,*.html,*.ts,*.js,*.json PrettierAsync
 
-
 " Remove trailing whitespaces
 fun! TrimWhitespace()
     let l:save = winsaveview()
@@ -464,3 +464,4 @@ fun! SetupCommandAlias(from, to)
 endfun
 call SetupCommandAlias("W","w")
 call SetupCommandAlias("Wa","wa")
+
