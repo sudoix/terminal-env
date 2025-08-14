@@ -49,6 +49,20 @@ Just clone the repo and run the following command:
 - Hide and unhide file menu: `ctrl + n`
 
 
+### For check resently changes in the file system:
+
+```bash
+sudo apt install sleuthkit 
+```
+
+Then you can use `fls` command to check the changes in the file system.
+
+```bash
+sudo fls -m/ -r /dev/mapper/ubuntu--vg-ubuntu--lv > /tmp/tl
+
+mactime -b /tmp/tl 2025-07-14 | tee /tmp/changes.txt | tail -n 500
+```
+
 
 Feel free to contribute :)
 
